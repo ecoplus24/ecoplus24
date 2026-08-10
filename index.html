@@ -199,16 +199,19 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 
 /* ── 검증 스트립 ── */
 .proof{background:var(--forest-mid);border-top:1px solid rgba(176,134,59,.2);border-bottom:1px solid rgba(176,134,59,.2)}
-.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding-top:0;padding-bottom:0}
+.proof-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;padding-top:0;padding-bottom:0}
 .proof-cell{padding:32px 28px;text-align:center;border-right:1px solid rgba(245,244,236,.09)}
 .proof-cell:last-child{border-right:none}
-.proof-num{font-family:var(--serif);font-size:38px;font-weight:700;color:var(--gold);line-height:1;letter-spacing:-1.5px;margin-bottom:8px}
+.proof-num{font-family:var(--serif);font-size:36px;font-weight:700;color:var(--gold);line-height:1;letter-spacing:-1.5px;margin-bottom:8px}
+.proof-num.count{font-size:32px;letter-spacing:-1px;font-variant-numeric:tabular-nums}
 .proof-lbl{color:#fff;font-size:14px;font-weight:600;margin-bottom:3px}
 .proof-desc{color:rgba(245,244,236,.58);font-size:12px}
 @media(max-width:720px){
   .proof-grid{grid-template-columns:1fr 1fr}
-  .proof-cell:nth-child(2){border-right:none}
-  .proof-cell:nth-child(1),.proof-cell:nth-child(2){border-bottom:1px solid rgba(245,244,236,.09)}
+  .proof-cell:nth-child(2n){border-right:none}
+  .proof-cell:nth-child(1),.proof-cell:nth-child(2),
+  .proof-cell:nth-child(3),.proof-cell:nth-child(4){border-bottom:1px solid rgba(245,244,236,.09)}
+  .proof-cell.span2{grid-column:1 / -1;border-right:none}
 }
 
 /* ── 섹션 공통 ── */
@@ -499,6 +502,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
     <div class="proof-cell"><div class="proof-num">150개월</div><div class="proof-lbl">지점장 경험</div><div class="proof-desc">조직·실적 운영</div></div>
     <div class="proof-cell"><div class="proof-num">정찰제</div><div class="proof-lbl">투명한 가격</div><div class="proof-desc">숨은비용 0원</div></div>
     <div class="proof-cell"><div class="proof-num">100%</div><div class="proof-lbl">1차 진단 무료</div><div class="proof-desc">부담 없이 시작</div></div>
+    <div class="proof-cell span2"><div class="proof-num count" id="visitCount">1,234+</div><div class="proof-lbl">누적 방문</div><div class="proof-desc">지금도 늘어나는 중</div></div>
   </div>
 </section>
 
@@ -1031,6 +1035,39 @@ document.addEventListener('keydown', e => {
   };
 </script>
 <script src="eco-track.js"></script>
+
+<!-- ═══ 누적 방문 카운터 ═══
+     표시값 = Apps Script 의 COUNTER_BASE(시작값) + 실제 고유 방문자수.
+     시작값을 바꾸려면 Code.gs 의 COUNTER_BASE 만 고치고 재배포한다.
+     조회가 실패해도 HTML 에 적힌 기본값이 그대로 남아 빈칸이 되지 않는다. -->
+<script>
+(function(){
+  var el = document.getElementById('visitCount');
+  if (!el) { return; }
+
+  var FALLBACK = 1234;
+
+  function countUp(target){
+    var t0 = null, dur = 1200;
+    function step(ts){
+      if (!t0) { t0 = ts; }
+      var p = Math.min(1, (ts - t0) / dur);
+      var eased = 1 - Math.pow(1 - p, 3);          /* 끝으로 갈수록 감속 */
+      el.textContent = Math.round(target * eased).toLocaleString('ko-KR') + '+';
+      if (p < 1) { requestAnimationFrame(step); }
+    }
+    requestAnimationFrame(step);
+  }
+
+  var url = (window.ECO_TRACK_CONFIG && window.ECO_TRACK_CONFIG.gasUrl) || '';
+  if (url.indexOf('http') !== 0){ countUp(FALLBACK); return; }
+
+  fetch(url + '?action=counter')
+    .then(function(r){ return r.json(); })
+    .then(function(d){ countUp(d && d.total ? d.total : FALLBACK); })
+    .catch(function(){ countUp(FALLBACK); });
+})();
+</script>
 
 </body>
 </html>

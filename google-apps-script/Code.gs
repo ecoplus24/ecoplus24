@@ -26,6 +26,12 @@ var SHEET_CTA     = 'CTA클릭';
 var KEEP_DAYS     = 180;   // 원본 이벤트 보관 일수 (초과분 자동 삭제)
 var DASHBOARD_KEY = '';    // 외부 대시보드에서 읽을 때 쓸 열쇠. 빈 값이면 조회 API 비활성.
 
+/* 홈페이지 방문 카운터 표시 설정
+   표시값 = COUNTER_BASE + 실제 고유 방문자수
+   COUNTER_BASE 는 실측이 아닌 시작값이다. 숫자를 바꾸려면 이 값만 고치고 재배포하면 된다. */
+var COUNTER_BASE      = 1234;
+var COUNTER_CACHE_SEC = 600;   // 집계 캐시 유지 시간(초). 짧게 잡으면 실행시간 할당량을 더 쓴다.
+
 var HEADERS = [
   '수신시각', '발생시각', '사이트', '이벤트', '방문자ID', '세션ID',
   '경로', '제목', '라벨', '값',
@@ -79,9 +85,15 @@ function doPost(e) {
   }
 }
 
-/* 브라우저로 열어 동작 확인 · (선택) 요약 JSON 조회 */
+/* 브라우저로 열어 동작 확인 · 카운터 조회 · (선택) 요약 JSON 조회 */
 function doGet(e) {
   var action = (e && e.parameter && e.parameter.action) || '';
+
+  /* 홈페이지 카운터. 이 응답은 누구나 볼 수 있으므로 합계만 내보낸다
+     (시작값과 실측치를 따로 돌려주면 외부에서 구분할 수 있다). */
+  if (action === 'counter') {
+    return _json({ ok: true, total: COUNTER_BASE + _visitorCount() });
+  }
 
   if (action === 'summary') {
     if (!DASHBOARD_KEY) { return _json({ ok: false, error: 'dashboard disabled' }); }
@@ -232,6 +244,32 @@ function 오래된이벤트정리() {
     if (v instanceof Date && v.getTime() < cutoff) { deleteCount++; } else { break; }
   }
   if (deleteCount > 0) { sh.deleteRows(2, deleteCount); }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   5. 고유 방문자 수 집계 (홈페이지 카운터용)
+   방문자ID 열만 읽어 중복을 제거한다. 결과는 캐시에 담아
+   방문자마다 시트를 읽지 않도록 한다.
+───────────────────────────────────────────────────────────── */
+function _visitorCount() {
+  var cache = CacheService.getScriptCache();
+  var hit = cache.get('visitor_count');
+  if (hit !== null) { return Number(hit); }
+
+  var sh = SpreadsheetApp.getActive().getSheetByName(SHEET_EVENTS);
+  var n = 0;
+
+  if (sh && sh.getLastRow() > 1) {
+    var vids = sh.getRange(2, 5, sh.getLastRow() - 1, 1).getValues();   // 5열 = 방문자ID
+    var seen = {};
+    for (var i = 0; i < vids.length; i++) {
+      var v = vids[i][0];
+      if (v && !seen[v]) { seen[v] = 1; n++; }
+    }
+  }
+
+  cache.put('visitor_count', String(n), COUNTER_CACHE_SEC);
+  return n;
 }
 
 /* ─────────────────────────────────────────────────────────────
