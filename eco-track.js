@@ -135,7 +135,7 @@
       try { gtag('event', event, { eco_label: payload.label, eco_value: payload.value, eco_site: SITE }); } catch (e) {}
     }
 
-    /* 자리표시자(GAS_WEBAPP_URL_HERE)가 그대로면 전송하지 않는다 */
+    /* 설정값이 실제 http(s) 주소가 아니면(자리표시자 그대로면) 전송하지 않는다 */
     if (!GAS_URL || GAS_URL.indexOf('http') !== 0) { return; }
 
     var body = JSON.stringify(payload);
