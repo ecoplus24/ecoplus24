@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>환불 정책 | (주)에코플러스 경영컨설팅</title>
+<meta name="description" content="(주)에코플러스 경영컨설팅 서비스의 환불 정책 안내. 컨설팅 단계별 환불 기준 및 정책자금 미수령 시 100% 환불 보장.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="환불 정책 | (주)에코플러스">
+<meta property="og:description" content="고객 신뢰를 최우선으로 하는 단계별 환불 정책. 정책자금 미수령 시 100% 환불 보장.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://eco-toss01.netlify.app/refund-policy.html">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.css"><link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#14432A;--navy2:#0E2E1D;--navy3:#162b48;
+  --gold:#B0863B;--gold2:#977231;--goldL:#F1E8D2;
+  --green:#2E7D46;--greenl:#e8f5ee;
+  --red:#B23B3B;--redl:#fdeaea;
+  --bg:#F5F4EC;--white:#ffffff;--text:#16241C;--muted:#4B5A50;--border:#E0DECF;
+  --sans:"Pretendard",sans-serif;--serif:"Gowun Batang",serif;
+}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.7;font-size:15px}
+a{color:var(--gold);text-decoration:none}
+a:hover{color:var(--gold2)}
+
+/* 헤더 */
+.header{background:var(--navy);color:#fff;padding:20px 28px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.1)}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:14px;color:#fff;font-weight:900;font-size:17px}
+.logo-mark{width:48px;height:48px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:2px}
+.logo-mark img{width:100%;height:100%;object-fit:contain}
+.brand-text{display:flex;flex-direction:column;gap:2px}
+.brand-name{font-size:17px;letter-spacing:.3px}
+.brand-sub{font-size:11px;font-weight:500;color:var(--gold2);letter-spacing:2px}
+.back-link{color:rgba(255,255,255,.75);font-size:13px;font-weight:500;display:flex;align-items:center;gap:6px;transition:color .2s}
+.back-link:hover{color:#fff}
+
+/* 메인 */
+.main{max-width:880px;margin:0 auto;padding:60px 28px 80px}
+.page-head{text-align:center;margin-bottom:50px}
+.page-head .badge{display:inline-block;background:var(--goldL);color:var(--gold);font-size:12px;font-weight:700;letter-spacing:2px;padding:6px 14px;border-radius:20px;margin-bottom:18px}
+.page-head h1{font-family:var(--serif);font-size:36px;font-weight:900;color:var(--navy);margin-bottom:14px;letter-spacing:-.5px}
+.page-head .subtitle{font-size:15px;color:var(--muted);line-height:1.7}
+
+/* 신뢰 박스 */
+.trust-box{background:linear-gradient(135deg,var(--navy) 0%,var(--navy3) 100%);color:#fff;padding:32px 28px;border-radius:14px;margin-bottom:48px;text-align:center;box-shadow:0 8px 28px rgba(13,30,53,.18)}
+.trust-box-title{font-size:14px;font-weight:700;color:var(--gold2);letter-spacing:1.5px;margin-bottom:10px}
+.trust-box-text{font-size:18px;font-weight:700;line-height:1.6}
+.trust-box-text strong{color:var(--gold2)}
+
+/* 섹션 */
+.section{background:#fff;border-radius:14px;padding:36px 32px;margin-bottom:24px;box-shadow:0 4px 16px rgba(0,0,0,.04);border:1px solid var(--border)}
+.section h2{font-family:var(--serif);font-size:22px;font-weight:900;color:var(--navy);margin-bottom:20px;padding-bottom:14px;border-bottom:2px solid var(--goldL);display:flex;align-items:center;gap:10px}
+.section h2 .num{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:var(--navy);color:#fff;border-radius:50%;font-size:14px;font-family:var(--sans)}
+
+/* 환불 단계 카드 */
+.refund-stages{display:flex;flex-direction:column;gap:14px;margin-top:8px}
+.stage-card{display:flex;gap:18px;padding:20px 22px;background:#fafaf8;border-radius:10px;border-left:5px solid var(--border);transition:transform .15s ease}
+.stage-card:hover{transform:translateX(3px)}
+.stage-card.full{border-left-color:var(--green);background:var(--greenl)}
+.stage-card.partial{border-left-color:var(--gold);background:#fdf6ee}
+.stage-card.none{border-left-color:var(--red);background:#fbf2f2}
+.stage-card.special{border-left-color:var(--green);background:linear-gradient(135deg,var(--greenl) 0%,#dff4e7 100%);border:2px solid var(--green);border-left-width:5px;position:relative;overflow:hidden}
+.stage-card.special::before{content:"★";position:absolute;top:8px;right:14px;font-size:18px;color:var(--green);opacity:.35}
+.stage-icon{flex-shrink:0;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;color:#fff}
+.stage-card.full .stage-icon{background:var(--green)}
+.stage-card.partial .stage-icon{background:var(--gold)}
+.stage-card.none .stage-icon{background:var(--red)}
+.stage-card.special .stage-icon{background:var(--green)}
+.stage-body{flex:1}
+.stage-title{font-size:16px;font-weight:900;color:var(--navy);margin-bottom:4px}
+.stage-rate{font-size:14px;font-weight:700;margin-bottom:8px;display:inline-block;padding:3px 10px;border-radius:14px}
+.stage-card.full .stage-rate{background:var(--green);color:#fff}
+.stage-card.partial .stage-rate{background:var(--gold);color:#fff}
+.stage-card.none .stage-rate{background:var(--red);color:#fff}
+.stage-card.special .stage-rate{background:var(--green);color:#fff}
+.stage-desc{font-size:14px;color:var(--muted);line-height:1.7}
+
+/* 절차 */
+.process-list{counter-reset:proc;list-style:none;padding:0}
+.process-list li{counter-increment:proc;padding:14px 0 14px 48px;position:relative;font-size:14.5px;line-height:1.7;border-bottom:1px solid var(--border)}
+.process-list li:last-child{border-bottom:none}
+.process-list li::before{content:counter(proc);position:absolute;left:0;top:14px;width:32px;height:32px;background:var(--navy);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px}
+.process-list li strong{color:var(--navy);font-weight:700}
+
+/* 안내 박스 */
+.notice-box{background:var(--goldL);border-left:4px solid var(--gold);padding:18px 22px;border-radius:8px;margin-top:20px;font-size:14px;line-height:1.7;color:#5a3008}
+.notice-box strong{color:var(--gold);display:block;margin-bottom:6px;font-size:13px;letter-spacing:.5px}
+
+/* 연락처 카드 */
+.contact-card{background:linear-gradient(135deg,var(--navy3) 0%,var(--navy) 100%);color:#fff;border-radius:14px;padding:36px 32px;text-align:center;box-shadow:0 8px 28px rgba(13,30,53,.18)}
+.contact-card h3{font-family:var(--serif);font-size:22px;font-weight:900;margin-bottom:8px}
+.contact-card p{color:rgba(255,255,255,.75);font-size:14px;margin-bottom:24px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:520px;margin:0 auto}
+.contact-item{background:rgba(255,255,255,.08);padding:18px 16px;border-radius:10px;text-decoration:none;color:#fff;transition:all .2s}
+.contact-item:hover{background:rgba(255,255,255,.15);transform:translateY(-2px);color:#fff}
+.contact-item .ci-label{font-size:11px;color:var(--gold2);font-weight:700;letter-spacing:1.5px;margin-bottom:6px}
+.contact-item .ci-value{font-size:16px;font-weight:900}
+
+/* 푸터 미니 */
+.footer-mini{background:var(--navy2);color:rgba(255,255,255,.5);padding:30px 28px;text-align:center;font-size:12px;line-height:1.8}
+.footer-mini a{color:rgba(255,255,255,.7);margin:0 8px}
+.footer-mini a:hover{color:#fff}
+
+@media(max-width:780px){
+  .page-head h1{font-size:28px}
+  .section{padding:26px 20px}
+  .section h2{font-size:19px}
+  .stage-card{flex-direction:column;gap:12px;padding:18px 18px}
+  .stage-icon{width:38px;height:38px;font-size:16px}
+  .contact-grid{grid-template-columns:1fr}
+  .brand-text{display:none}
+}
+</style>
+
+<!-- ═══ Google Analytics 4 ═══ (G-XXXXXXXXXX 를 실제 측정 ID로 교체) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+</script>
+</head>
+<body>
+
+<!-- 헤더 -->
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <div class="logo-mark"><img src="ecoplus_logo.png" alt="에코플러스"></div>
+      <div class="brand-text">
+        <span class="brand-name">(주)에코플러스</span>
+        <span class="brand-sub">ECOPLUS CONSULTING</span>
+      </div>
+    </a>
+    <a href="index.html" class="back-link">← 메인으로</a>
+  </div>
+</header>
+
+<main class="main">
+
+  <!-- 페이지 헤드 -->
+  <div class="page-head">
+    <span class="badge">REFUND POLICY</span>
+    <h1>환불 정책</h1>
+    <p class="subtitle">(주)에코플러스는 고객의 신뢰를 최우선으로 합니다.<br>컨설팅 진행 단계에 따라 공정하고 명확한 환불 기준을 안내드립니다.</p>
+  </div>
+
+  <!-- 신뢰 보장 박스 -->
+  <div class="trust-box">
+    <div class="trust-box-title">★ 정책자금 미수령 시 보장</div>
+    <div class="trust-box-text">고객 귀책 사유가 아닌 이유로 자금을 받지 못하실 경우,<br><strong>100% 전액 환불</strong>해 드립니다.</div>
+  </div>
+
+  <!-- 1. 환불 기준 -->
+  <section class="section">
+    <h2><span class="num">1</span>단계별 환불 기준</h2>
+
+    <div class="refund-stages">
+
+      <!-- 단계 1: 착수 전 -->
+      <div class="stage-card full">
+        <div class="stage-icon">✓</div>
+        <div class="stage-body">
+          <div class="stage-title">컨설팅 착수 전 (계약 후 진단 시작 전)</div>
+          <div class="stage-rate">100% 전액 환불</div>
+          <div class="stage-desc">결제 후 컨설팅 업무가 실제로 시작되기 전이라면, 단순 변심을 포함하여 어떤 사유든 결제하신 금액의 100%를 환불해 드립니다.</div>
+        </div>
+      </div>
+
+      <!-- 단계 2: 1차 진단 완료 후 -->
+      <div class="stage-card partial">
+        <div class="stage-icon">%</div>
+        <div class="stage-body">
+          <div class="stage-title">1차 진단 완료 후 환불 요청 시</div>
+          <div class="stage-rate">70% 환불</div>
+          <div class="stage-desc">기업 분석·서류 검토 등 1차 진단 업무가 완료된 단계에서 환불을 요청하실 경우, 이미 투입된 컨설턴트의 인건비와 분석 비용을 제외하고 결제 금액의 70%를 환불해 드립니다.</div>
+        </div>
+      </div>
+
+      <!-- 단계 3: 본 컨설팅 진행 후 -->
+      <div class="stage-card none">
+        <div class="stage-icon">✕</div>
+        <div class="stage-body">
+          <div class="stage-title">본 컨설팅 진행 후</div>
+          <div class="stage-rate">환불 불가</div>
+          <div class="stage-desc">본 컨설팅이 시작된 이후에는 사업계획서 작성, 정부기관 제출 서류 준비, 발표 코칭 등 핵심 산출물이 이미 고객께 제공된 상태이므로 원칙적으로 환불이 불가합니다. 단, 당사의 중대한 귀책 사유가 있는 경우에는 별도 협의 후 부분 환불이 가능합니다.</div>
+        </div>
+      </div>
+
+      <!-- 단계 4: 특별 보장 -->
+      <div class="stage-card special">
+        <div class="stage-icon">★</div>
+        <div class="stage-body">
+          <div class="stage-title">정책자금 미수령 시 (특별 보장)</div>
+          <div class="stage-rate">100% 전액 환불</div>
+          <div class="stage-desc">정책자금 컨설팅의 경우, <strong>고객 귀책 사유가 아닌 사유</strong>로 정책자금을 수령하지 못하실 경우 결제하신 금액의 100%를 전액 환불해 드립니다. 이는 컨설팅 결과에 대한 당사의 자신감과 책임의 표현입니다.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="notice-box">
+      <strong>※ 고객 귀책 사유의 범위</strong>
+      고객 귀책 사유란 ① 필수 서류 미제출 또는 허위 자료 제공, ② 자금 신청 자격 요건 미충족 사실의 은폐, ③ 정부기관 심사 과정에서의 협조 거부, ④ 컨설팅 진행 중 고객의 일방적 사업 포기 등을 의미합니다. 이러한 사유가 발생한 경우 특별 보장 조항은 적용되지 않습니다.
+    </div>
+  </section>
+
+  <!-- 2. 환불 신청 절차 -->
+  <section class="section">
+    <h2><span class="num">2</span>환불 신청 절차</h2>
+
+    <ol class="process-list">
+      <li><strong>환불 신청 접수</strong> — 전화(031-571-8953) 또는 카카오톡 채널(@에코플러스 경영컨설팅)로 환불 의사를 전달해 주세요.</li>
+      <li><strong>진행 단계 확인</strong> — 담당 컨설턴트가 고객의 컨설팅 진행 단계를 확인하고, 적용 가능한 환불 비율을 안내해 드립니다.</li>
+      <li><strong>환불 동의 및 서류 작성</strong> — 환불 조건에 동의하시면 환불 동의서를 작성하여 주시기 바랍니다. (이메일 또는 카카오톡으로 진행 가능)</li>
+      <li><strong>환불 진행</strong> — 동의서 접수 후 영업일 기준 <strong>3~5일 이내</strong>에 결제하신 수단으로 환불이 진행됩니다.</li>
+      <li><strong>환불 완료 안내</strong> — 환불 처리가 완료되면 카카오톡 또는 문자로 안내해 드립니다.</li>
+    </ol>
+
+    <div class="notice-box" style="margin-top:24px">
+      <strong>※ 환불 시 유의사항</strong>
+      ① 카드 결제 건의 환불은 카드사 정책에 따라 영업일 기준 3~7일이 추가로 소요될 수 있습니다.<br>
+      ② 토스페이먼츠를 통한 결제는 토스 환불 정책을 따르며, 결제 수단으로 자동 환불됩니다.<br>
+      ③ 부분 환불 시 부가가치세 등 세금 관련 처리는 세법에 따라 진행됩니다.
+    </div>
+  </section>
+
+  <!-- 3. 연락처 -->
+  <div class="contact-card">
+    <h3>환불 관련 문의</h3>
+    <p>아래 채널로 문의주시면 신속하게 답변드리겠습니다.</p>
+    <div class="contact-grid">
+      <a href="tel:0315718953" class="contact-item">
+        <div class="ci-label">대표전화</div>
+        <div class="ci-value">031-571-8953</div>
+      </a>
+      <a href="https://pf.kakao.com/_ZZqsX/chat" target="_blank" rel="noopener" class="contact-item">
+        <div class="ci-label">카카오톡 채널</div>
+        <div class="ci-value">@에코플러스</div>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<!-- 푸터 미니 -->
+<footer class="footer-mini">
+  <div>주식회사 에코플러스 · 대표 김태검 · 사업자등록번호 147-86-03498 · 통신판매업신고 제 2026-경기구리-0086 호</div>
+  <div style="margin-top:6px">경기도 구리시 갈매중앙로 190, 휴밸나인지식산업센터 C동 10097호 · 031-571-8953</div>
+  <div style="margin-top:14px">
+    <a href="index.html">메인</a> ·
+    <a href="refund-policy.html">환불 정책</a>
+  </div>
+  <div style="margin-top:14px;color:rgba(255,255,255,.35);font-size:11px">© 2026 (주)에코플러스. All rights reserved.</div>
+</footer>
+
+
+<!-- ═══ 에코플러스 통합 트래커 ═══ -->
+<script>
+  window.ECO_TRACK_CONFIG = {
+    gasUrl: 'GAS_WEBAPP_URL_HERE',   /* Apps Script 배포 후 /exec URL로 교체 */
+    site: 'ecoplus100',
+    crossDomains: ['ecofree.cloud']
+  };
+</script>
+<script src="eco-track.js"></script>
+</body>
+</html>
