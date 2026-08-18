@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>결제 완료 | 에코플러스 경영컨설팅</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.css"><link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#14432A;--gold:#B0863B;--gold2:#977231;--green:#2E7D46;--greenl:#e8f5ee;--bg:#F5F4EC;--white:#fff;--text:#16241C;--muted:#4B5A50;--border:#E0DECF}
+body{background:var(--bg);font-family:"Pretendard",sans-serif;color:var(--text);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;line-height:1.7}
+@keyframes pop{from{transform:scale(0);opacity:0}50%{transform:scale(1.2)}to{transform:scale(1);opacity:1}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.card{background:#fff;max-width:560px;width:100%;border-radius:16px;padding:48px 40px;text-align:center;box-shadow:0 24px 60px rgba(13,30,53,.12);animation:fadeUp .5s ease}
+.check{width:88px;height:88px;border-radius:50%;background:var(--greenl);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;animation:pop .6s cubic-bezier(.2,1.2,.4,1) both}
+.check svg{width:48px;height:48px;color:var(--green)}
+.eyebrow{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--green);font-weight:700;margin-bottom:10px}
+h1{font-family:"Gowun Batang",serif;font-size:32px;font-weight:900;color:var(--navy);margin-bottom:14px;letter-spacing:-1px}
+.lead{font-size:16px;color:var(--muted);line-height:1.9;margin-bottom:30px}
+.lead strong{color:var(--text);font-weight:700}
+.info-box{background:var(--bg);border-radius:10px;padding:20px 24px;margin-bottom:28px;text-align:left;border:1px solid var(--border)}
+.info-row{display:flex;justify-content:space-between;padding:8px 0;font-size:14px;border-bottom:1px dashed var(--border)}
+.info-row:last-child{border-bottom:none}
+.info-row .lbl{color:var(--muted)}
+.info-row .val{color:var(--text);font-weight:700}
+.steps{background:var(--greenl);border-left:3px solid var(--green);padding:18px 22px;border-radius:6px;margin-bottom:28px;text-align:left}
+.steps h4{font-size:14px;color:var(--green);font-weight:900;margin-bottom:10px;letter-spacing:.5px}
+.steps ul{list-style:none;font-size:14px;color:var(--text)}
+.steps li{padding:4px 0;display:flex;gap:8px}
+.steps li::before{content:"→";color:var(--green);font-weight:900}
+.btn-grid{display:flex;gap:10px}
+.btn{flex:1;padding:14px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;transition:all .2s}
+.btn-primary{background:var(--navy);color:#fff}
+.btn-primary:hover{background:#1a2d4a}
+.btn-ghost{background:var(--bg);color:var(--text);border:1.5px solid var(--border)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.contact{margin-top:24px;font-size:13px;color:var(--muted)}
+.contact strong{color:var(--gold)}
+</style>
+
+<!-- ═══ Google Analytics 4 ═══ (G-XXXXXXXXXX 를 실제 측정 ID로 교체) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+</script>
+</head>
+<body>
+<div class="card">
+  <div class="check">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+  <div class="eyebrow">PAYMENT COMPLETE</div>
+  <h1>결제가 완료되었습니다</h1>
+  <p class="lead">
+    <strong>(주)에코플러스</strong>의 컨설팅 상품 결제가 정상 처리되었습니다.<br>
+    영업일 기준 1일 이내 담당 컨설턴트가 연락드립니다.
+  </p>
+
+  <div class="info-box">
+    <div class="info-row">
+      <span class="lbl">주문번호</span>
+      <span class="val" id="orderId">-</span>
+    </div>
+    <div class="info-row">
+      <span class="lbl">상품명</span>
+      <span class="val" id="orderName">-</span>
+    </div>
+    <div class="info-row">
+      <span class="lbl">결제금액</span>
+      <span class="val" id="amount">-</span>
+    </div>
+    <div class="info-row">
+      <span class="lbl">결제수단</span>
+      <span class="val">토스페이먼츠</span>
+    </div>
+  </div>
+
+  <div class="steps">
+    <h4>📋 다음 진행 절차</h4>
+    <ul>
+      <li>담당 컨설턴트 배정 (1영업일 이내)</li>
+      <li>전화 또는 카톡으로 사전 인터뷰 일정 조율</li>
+      <li>1차 컨설팅 미팅 (대면 또는 화상)</li>
+      <li>세금계산서 발행 (요청 시)</li>
+    </ul>
+  </div>
+
+  <div class="btn-grid">
+    <a href="index.html" class="btn btn-ghost">홈으로</a>
+    <a href="#" onclick="window.print();return false" class="btn btn-primary">영수증 출력</a>
+  </div>
+
+  <p class="contact">
+    문의: <strong>(주)에코플러스 · 에코플러스 경영지도사 그룹</strong><br>
+    📞 010-0000-0000 · ✉️ ecoplus@example.com
+  </p>
+</div>
+
+<script>
+// URL 파라미터 파싱 (토스페이먼츠가 자동으로 전달)
+const params = new URLSearchParams(window.location.search);
+const orderId = params.get('orderId') || 'ECO_DEMO_12345';
+const amount = params.get('amount') || '547800';
+const paymentKey = params.get('paymentKey');
+
+document.getElementById('orderId').textContent = orderId;
+document.getElementById('amount').textContent = parseInt(amount).toLocaleString() + '원';
+
+// 주문번호에서 상품명 추출 시도 (실제로는 서버에서 조회)
+document.getElementById('orderName').textContent = '컨설팅 상품';
+
+// ═══════════════════════════════════════════
+// 결제 승인 API 호출 (Netlify Functions)
+// paymentKey가 있을 때만 (실제 결제 후)
+// ═══════════════════════════════════════════
+if (paymentKey) {
+  fetch('/.netlify/functions/confirm-payment', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ paymentKey, orderId, amount })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.success) {
+      console.log('결제 승인 완료:', data);
+      if (data.orderName) {
+        document.getElementById('orderName').textContent = data.orderName;
+      }
+      // 영수증 URL이 있으면 출력 버튼에 연결
+      if (data.receipt) {
+        const receiptBtn = document.querySelector('.btn-primary');
+        if (receiptBtn) {
+          receiptBtn.onclick = function(e){
+            e.preventDefault();
+            window.open(data.receipt, '_blank');
+          };
+          receiptBtn.textContent = '영수증 확인';
+        }
+      }
+    } else {
+      console.error('결제 승인 실패:', data.error);
+      alert('결제 승인 중 오류가 발생했습니다.\n관리자에게 문의해주세요.\n\n' + (data.error || ''));
+    }
+  })
+  .catch(err => {
+    console.error('승인 요청 실패:', err);
+    // 로컬 테스트 시에는 무시
+  });
+}
+</script>
+
+<!-- ═══ 에코플러스 통합 트래커 ═══ -->
+<script>
+  window.ECO_TRACK_CONFIG = {
+    gasUrl: 'https://script.google.com/macros/s/AKfycbzmeIEQaAZAYt1njCVs4BzdGCQdyMC4Q8I_9VCjxEAYpEqCxZpPT7YDcYqQuL8KUQMJ/exec',   /* Apps Script 배포 후 /exec URL로 교체 */
+    site: 'ecoplus100',
+    crossDomains: ['ecofree.cloud']
+  };
+</script>
+<script src="eco-track.js"></script>
+<script>
+  /* 결제 성공 전환 기록 */
+  (function(){
+    var q = new URLSearchParams(location.search);
+    if (window.ecoTrack) ecoTrack('pay_success', {
+      label: q.get('orderId') || '',
+      value: q.get('amount') || ''
+    });
+  })();
+</script>
+</body>
+</html>

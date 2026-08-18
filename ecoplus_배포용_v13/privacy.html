@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>개인정보처리방침 | (주)에코플러스 경영컨설팅</title>
+<meta name="description" content="(주)에코플러스 개인정보처리방침. 수집 항목, 처리 목적, 보유 기간, 위탁 현황 및 정보주체의 권리 안내.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="개인정보처리방침 | (주)에코플러스">
+<meta property="og:description" content="(주)에코플러스 개인정보처리방침. 수집 항목, 처리 목적, 보유 기간, 위탁 현황 및 정보주체의 권리 안내.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://eco-toss01.netlify.app/privacy.html">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.css"><link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#14432A;--navy2:#0E2E1D;--navy3:#162b48;
+  --gold:#B0863B;--gold2:#977231;--goldL:#F1E8D2;
+  --green:#2E7D46;--greenl:#e8f5ee;
+  --red:#B23B3B;--redl:#fdeaea;
+  --bg:#F5F4EC;--white:#ffffff;--text:#16241C;--muted:#4B5A50;--border:#E0DECF;
+  --sans:"Pretendard",sans-serif;--serif:"Gowun Batang",serif;
+}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.7;font-size:15px}
+a{color:var(--gold);text-decoration:none}
+a:hover{color:var(--gold2)}
+
+/* 헤더 */
+.header{background:var(--navy);color:#fff;padding:20px 28px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.1)}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:14px;color:#fff;font-weight:900;font-size:17px}
+.logo-mark{width:48px;height:48px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:2px}
+.logo-mark img{width:100%;height:100%;object-fit:contain}
+.brand-text{display:flex;flex-direction:column;gap:2px}
+.brand-name{font-size:17px;letter-spacing:.3px}
+.brand-sub{font-size:11px;font-weight:500;color:var(--gold2);letter-spacing:2px}
+.back-link{color:rgba(255,255,255,.75);font-size:13px;font-weight:500;display:flex;align-items:center;gap:6px;transition:color .2s}
+.back-link:hover{color:#fff}
+
+/* 메인 */
+.main{max-width:880px;margin:0 auto;padding:60px 28px 80px}
+.page-head{text-align:center;margin-bottom:50px}
+.page-head .badge{display:inline-block;background:var(--goldL);color:var(--gold);font-size:12px;font-weight:700;letter-spacing:2px;padding:6px 14px;border-radius:20px;margin-bottom:18px}
+.page-head h1{font-family:var(--serif);font-size:36px;font-weight:900;color:var(--navy);margin-bottom:14px;letter-spacing:-.5px}
+.page-head .subtitle{font-size:15px;color:var(--muted);line-height:1.7}
+
+/* 신뢰 박스 */
+.trust-box{background:linear-gradient(135deg,var(--navy) 0%,var(--navy3) 100%);color:#fff;padding:32px 28px;border-radius:14px;margin-bottom:48px;text-align:center;box-shadow:0 8px 28px rgba(13,30,53,.18)}
+.trust-box-title{font-size:14px;font-weight:700;color:var(--gold2);letter-spacing:1.5px;margin-bottom:10px}
+.trust-box-text{font-size:18px;font-weight:700;line-height:1.6}
+.trust-box-text strong{color:var(--gold2)}
+
+/* 섹션 */
+.section{background:#fff;border-radius:14px;padding:36px 32px;margin-bottom:24px;box-shadow:0 4px 16px rgba(0,0,0,.04);border:1px solid var(--border)}
+.section h2{font-family:var(--serif);font-size:22px;font-weight:900;color:var(--navy);margin-bottom:20px;padding-bottom:14px;border-bottom:2px solid var(--goldL);display:flex;align-items:center;gap:10px}
+.section h2 .num{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:var(--navy);color:#fff;border-radius:50%;font-size:14px;font-family:var(--sans)}
+
+/* 환불 단계 카드 */
+.refund-stages{display:flex;flex-direction:column;gap:14px;margin-top:8px}
+.stage-card{display:flex;gap:18px;padding:20px 22px;background:#fafaf8;border-radius:10px;border-left:5px solid var(--border);transition:transform .15s ease}
+.stage-card:hover{transform:translateX(3px)}
+.stage-card.full{border-left-color:var(--green);background:var(--greenl)}
+.stage-card.partial{border-left-color:var(--gold);background:#fdf6ee}
+.stage-card.none{border-left-color:var(--red);background:#fbf2f2}
+.stage-card.special{border-left-color:var(--green);background:linear-gradient(135deg,var(--greenl) 0%,#dff4e7 100%);border:2px solid var(--green);border-left-width:5px;position:relative;overflow:hidden}
+.stage-card.special::before{content:"★";position:absolute;top:8px;right:14px;font-size:18px;color:var(--green);opacity:.35}
+.stage-icon{flex-shrink:0;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;color:#fff}
+.stage-card.full .stage-icon{background:var(--green)}
+.stage-card.partial .stage-icon{background:var(--gold)}
+.stage-card.none .stage-icon{background:var(--red)}
+.stage-card.special .stage-icon{background:var(--green)}
+.stage-body{flex:1}
+.stage-title{font-size:16px;font-weight:900;color:var(--navy);margin-bottom:4px}
+.stage-rate{font-size:14px;font-weight:700;margin-bottom:8px;display:inline-block;padding:3px 10px;border-radius:14px}
+.stage-card.full .stage-rate{background:var(--green);color:#fff}
+.stage-card.partial .stage-rate{background:var(--gold);color:#fff}
+.stage-card.none .stage-rate{background:var(--red);color:#fff}
+.stage-card.special .stage-rate{background:var(--green);color:#fff}
+.stage-desc{font-size:14px;color:var(--muted);line-height:1.7}
+
+/* 절차 */
+.process-list{counter-reset:proc;list-style:none;padding:0}
+.process-list li{counter-increment:proc;padding:14px 0 14px 48px;position:relative;font-size:14.5px;line-height:1.7;border-bottom:1px solid var(--border)}
+.process-list li:last-child{border-bottom:none}
+.process-list li::before{content:counter(proc);position:absolute;left:0;top:14px;width:32px;height:32px;background:var(--navy);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px}
+.process-list li strong{color:var(--navy);font-weight:700}
+
+/* 안내 박스 */
+.notice-box{background:var(--goldL);border-left:4px solid var(--gold);padding:18px 22px;border-radius:8px;margin-top:20px;font-size:14px;line-height:1.7;color:#5a3008}
+.notice-box strong{color:var(--gold);display:block;margin-bottom:6px;font-size:13px;letter-spacing:.5px}
+
+/* 연락처 카드 */
+.contact-card{background:linear-gradient(135deg,var(--navy3) 0%,var(--navy) 100%);color:#fff;border-radius:14px;padding:36px 32px;text-align:center;box-shadow:0 8px 28px rgba(13,30,53,.18)}
+.contact-card h3{font-family:var(--serif);font-size:22px;font-weight:900;margin-bottom:8px}
+.contact-card p{color:rgba(255,255,255,.75);font-size:14px;margin-bottom:24px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:520px;margin:0 auto}
+.contact-item{background:rgba(255,255,255,.08);padding:18px 16px;border-radius:10px;text-decoration:none;color:#fff;transition:all .2s}
+.contact-item:hover{background:rgba(255,255,255,.15);transform:translateY(-2px);color:#fff}
+.contact-item .ci-label{font-size:11px;color:var(--gold2);font-weight:700;letter-spacing:1.5px;margin-bottom:6px}
+.contact-item .ci-value{font-size:16px;font-weight:900}
+
+/* 푸터 미니 */
+.footer-mini{background:var(--navy2);color:rgba(255,255,255,.5);padding:30px 28px;text-align:center;font-size:12px;line-height:1.8}
+.footer-mini a{color:rgba(255,255,255,.7);margin:0 8px}
+.footer-mini a:hover{color:#fff}
+
+@media(max-width:780px){
+  .page-head h1{font-size:28px}
+  .section{padding:26px 20px}
+  .section h2{font-size:19px}
+  .stage-card{flex-direction:column;gap:12px;padding:18px 18px}
+  .stage-icon{width:38px;height:38px;font-size:16px}
+  .contact-grid{grid-template-columns:1fr}
+  .brand-text{display:none}
+}
+</style>
+
+<!-- ═══ Google Analytics 4 ═══ (G-XXXXXXXXXX 를 실제 측정 ID로 교체) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+</script>
+</head>
+<body>
+
+<!-- 헤더 -->
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <div class="logo-mark"><img src="ecoplus_logo.png" alt="에코플러스"></div>
+      <div class="brand-text">
+        <span class="brand-name">(주)에코플러스</span>
+        <span class="brand-sub">ECOPLUS CONSULTING</span>
+      </div>
+    </a>
+    <a href="index.html" class="back-link">← 메인으로</a>
+  </div>
+</header>
+
+<main class="main">
+
+  <div class="page-head">
+    <span class="badge">PRIVACY POLICY</span>
+    <h1>개인정보처리방침</h1>
+    <p class="subtitle">(주)에코플러스는 이용자의 개인정보를 소중히 다루며,<br>관계 법령에 따라 안전하게 관리합니다.</p>
+  </div>
+
+
+  <div class="notice-box" style="margin-bottom:28px;margin-top:0">
+    <strong>※ 총칙</strong>
+    주식회사 에코플러스(이하 "회사")는 「개인정보 보호법」 등 관계 법령을 준수하며, 이용자의 개인정보를 보호하고 이와 관련한 고충을 신속하게 처리할 수 있도록 다음과 같이 개인정보처리방침을 수립·공개합니다.
+  </div>
+
+  <section class="section">
+    <h2><span class="num">1</span>수집하는 개인정보의 항목 및 방법</h2>
+    <p>회사는 서비스 제공을 위하여 다음의 개인정보를 수집합니다.</p>
+    <ol class="process-list">
+      <li><strong>무료 진단 신청 시 (필수)</strong> — 성명(대표자명), 휴대전화번호, 사업자 상호, 업종, 사업장 소재지(시·군·구)</li>
+      <li><strong>컨설팅 계약 시 (필수)</strong> — 성명, 연락처, 이메일, 사업자등록번호, 사업자등록증, 재무제표 등 신청에 필요한 기업 관련 서류</li>
+      <li><strong>결제 시</strong> — 결제수단 정보 및 결제 승인 내역 (결제대행사를 통해 처리되며, <b>회사는 카드번호 등 결제 인증정보를 직접 저장하지 않습니다</b>)</li>
+      <li><strong>자동 수집 항목</strong> — 접속 IP, 브라우저 종류, 방문 일시, 서비스 이용 기록, 쿠키</li>
+    </ol>
+    <div class="notice-box">
+      <strong>※ 수집 방법</strong>
+      홈페이지 및 진단 신청 폼 입력, 카카오톡 채널·전화·이메일을 통한 상담, 계약 체결 과정에서의 서류 제출, 결제대행사를 통한 결제 처리, 웹 로그 분석 도구를 통한 자동 수집
+    </div>
+  </section>
+
+  <section class="section">
+    <h2><span class="num">2</span>개인정보의 처리 목적</h2>
+    <ol class="process-list">
+      <li><strong>컨설팅 서비스 제공</strong> — 기업진단, 적합사업 검토, 신청서류 작성 가이드 및 검수 등 계약 이행</li>
+      <li><strong>계약 및 결제 처리</strong> — 계약 체결·이행, 대금 결제, 세금계산서·현금영수증 발행, 환불 처리</li>
+      <li><strong>고객 상담 및 민원 처리</strong> — 본인 확인, 문의 응대, 불만 처리, 처리 결과 통보</li>
+      <li><strong>서비스 개선</strong> — 이용 통계 분석을 통한 서비스 품질 개선 (식별 정보를 결합하지 않은 통계 목적)</li>
+    </ol>
+    <div class="notice-box">
+      <strong>※ 목적 외 이용 금지</strong>
+      회사는 수집한 개인정보를 위 목적 외의 용도로 이용하지 않으며, 목적이 변경되는 경우 「개인정보 보호법」 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행합니다.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2><span class="num">3</span>개인정보의 보유 및 이용 기간</h2>
+    <p>회사는 처리 목적이 달성되면 지체 없이 개인정보를 파기합니다. 다만 관계 법령에 따라 다음의 정보는 명시된 기간 동안 보관합니다.</p>
+    <ol class="process-list">
+      <li><strong>계약 또는 청약철회 등에 관한 기록</strong> — 5년 (전자상거래 등에서의 소비자보호에 관한 법률)</li>
+      <li><strong>대금결제 및 재화 등의 공급에 관한 기록</strong> — 5년 (전자상거래 등에서의 소비자보호에 관한 법률)</li>
+      <li><strong>소비자의 불만 또는 분쟁처리에 관한 기록</strong> — 3년 (전자상거래 등에서의 소비자보호에 관한 법률)</li>
+      <li><strong>표시·광고에 관한 기록</strong> — 6개월 (전자상거래 등에서의 소비자보호에 관한 법률)</li>
+      <li><strong>세법상 거래에 관한 장부 및 증빙서류</strong> — 5년 (국세기본법)</li>
+      <li><strong>웹사이트 접속 기록</strong> — 3개월 (통신비밀보호법)</li>
+      <li><strong>무료 진단 신청 정보 (계약 미체결 시)</strong> — 신청일로부터 1년 후 파기</li>
+    </ol>
+  </section>
+
+  <section class="section">
+    <h2><span class="num">4</span>개인정보의 제3자 제공</h2>
+    <p>회사는 이용자의 개인정보를 <b>제2조에 명시한 범위를 초과하여 제3자에게 제공하지 않습니다.</b> 다만 다음의 경우는 예외로 합니다.</p>
+    <p>① 이용자가 사전에 동의한 경우<br>
+    ② 법령의 규정에 의하거나, 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우</p>
+    <div class="notice-box">
+      <strong>※ 정부기관 신청서류 제출 관련</strong>
+      정책자금·정부지원사업·인증 신청을 위해 이용자의 서류를 해당 기관에 제출하는 업무는, <b>이용자의 개별 동의와 위임 범위 내에서</b> 계약 이행을 위해 수행됩니다. 제출 대상 기관과 제출 서류는 신청 전에 이용자에게 안내하고 확인을 받습니다.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2><span class="num">5</span>개인정보 처리의 위탁</h2>
+    <p>회사는 원활한 서비스 제공을 위하여 아래와 같이 개인정보 처리 업무를 위탁하고 있으며, 위탁계약 시 개인정보의 안전한 관리에 관한 사항을 명시하고 있습니다.</p>
+    <ol class="process-list">
+      <li><strong>결제 처리</strong> — 네이버파이낸셜(주) / 토스페이먼츠(주) 등 결제대행사 · 결제 승인, 취소, 환불 처리</li>
+      <li><strong>웹사이트 호스팅</strong> — Netlify, Inc. · 사이트 운영 및 데이터 보관</li>
+      <li><strong>이용 통계 분석</strong> — Google LLC (Google Analytics) · 서비스 이용 현황 분석 (IP 익명화 적용)</li>
+      <li><strong>고객 상담 채널 운영</strong> — 주식회사 카카오 (카카오톡 채널) · 상담 접수 및 안내</li>
+    </ol>
+    <div class="notice-box">
+      <strong>※ 변경 시 고지</strong>
+      위탁 업무의 내용이나 수탁자가 변경될 경우, 지체 없이 본 개인정보처리방침을 통하여 공개합니다.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2><span class="num">6</span>개인정보의 파기 절차 및 방법</h2>
+    <p>① <strong>파기 절차</strong> — 처리 목적이 달성되거나 보유 기간이 경과한 개인정보는 지체 없이 파기합니다. 다른 법령에 따라 보존해야 하는 경우 별도의 데이터베이스로 분리하여 보관합니다.<br>
+    ② <strong>파기 방법</strong> — 전자적 파일 형태의 정보는 복구가 불가능한 기술적 방법으로 삭제하며, 종이 문서는 분쇄하거나 소각하여 파기합니다.</p>
+  </section>
+
+  <section class="section">
+    <h2><span class="num">7</span>정보주체의 권리와 행사 방법</h2>
+    <p>이용자는 언제든지 다음의 권리를 행사할 수 있습니다.</p>
+    <ol class="process-list">
+      <li><strong>개인정보 열람 요구</strong></li>
+      <li><strong>오류가 있는 경우 정정 요구</strong></li>
+      <li><strong>삭제 요구</strong> (법령상 보존 의무가 있는 경우 제외)</li>
+      <li><strong>처리 정지 요구</strong></li>
+    </ol>
+    <div class="notice-box">
+      <strong>※ 권리 행사 방법</strong>
+      전화(031-571-8953), 이메일(ecoplus24@naver.com) 또는 카카오톡 채널(@에코플러스 경영컨설팅)로 요청하시면 지체 없이 조치하겠습니다. 대리인을 통해 요구하실 경우 위임장을 제출해 주셔야 합니다.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2><span class="num">8</span>개인정보의 안전성 확보 조치</h2>
+    <ol class="process-list">
+      <li><strong>관리적 조치</strong> — 개인정보 취급자 최소화 및 교육, 내부관리계획 수립·시행</li>
+      <li><strong>기술적 조치</strong> — 개인정보처리시스템 접근권한 관리, 전송 구간 암호화(HTTPS), 접속기록 보관</li>
+      <li><strong>물리적 조치</strong> — 서류 및 저장매체의 잠금장치가 있는 장소 보관</li>
+    </ol>
+  </section>
+
+  <section class="section">
+    <h2><span class="num">9</span>쿠키 및 자동 수집 도구의 운영</h2>
+    <p>① 회사는 이용자에게 개인화된 서비스를 제공하고 이용 통계를 분석하기 위하여 쿠키(cookie)를 사용합니다.<br>
+    ② 이용자는 웹브라우저 설정을 통해 쿠키 저장을 거부할 수 있습니다. 다만 쿠키 저장을 거부할 경우 일부 서비스 이용에 제한이 발생할 수 있습니다.<br>
+    ③ 회사는 Google Analytics를 이용하여 이용 통계를 수집하며, IP 익명화 기능을 적용하고 있습니다. Google Analytics의 데이터 수집을 원하지 않으시는 경우 Google에서 제공하는 차단 도구를 이용하실 수 있습니다.</p>
+  </section>
+
+  <section class="section">
+    <h2><span class="num">10</span>개인정보 보호책임자</h2>
+    <p>회사는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 이용자의 불만 처리 및 피해 구제를 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.</p>
+    <ol class="process-list">
+      <li><strong>개인정보 보호책임자</strong> — 김태검 (대표이사)</li>
+      <li><strong>연락처</strong> — 031-571-8953 / ecoplus24@naver.com</li>
+      <li><strong>소속</strong> — 주식회사 에코플러스</li>
+    </ol>
+    <div class="notice-box">
+      <strong>※ 권익침해 구제 방법</strong>
+      개인정보 침해에 대한 신고나 상담이 필요한 경우 아래 기관에 문의하실 수 있습니다.<br>
+      · 개인정보분쟁조정위원회 1833-6972 (www.kopico.go.kr)<br>
+      · 개인정보침해신고센터 (국번없이) 118 (privacy.kisa.or.kr)<br>
+      · 대검찰청 사이버수사과 (국번없이) 1301 · 경찰청 사이버수사국 (국번없이) 182
+    </div>
+  </section>
+
+  <section class="section">
+    <h2><span class="num">11</span>개인정보처리방침의 변경</h2>
+    <p>본 개인정보처리방침은 <b>2026년 8월 18일</b>부터 적용됩니다. 법령·정책 또는 보안기술의 변경에 따라 내용의 추가·삭제 및 수정이 있을 경우, 변경사항의 시행 7일 전부터 사이트를 통하여 공지합니다.</p>
+  </section>
+
+  <div class="contact-card">
+    <h3>개인정보 관련 문의</h3>
+    <p>개인정보 열람·정정·삭제·처리정지 요청은 아래로 연락 주세요.</p>
+    <div class="contact-grid">
+      <a href="tel:0315718953" class="contact-item">
+        <div class="ci-label">대표전화</div>
+        <div class="ci-value">031-571-8953</div>
+      </a>
+      <a href="mailto:ecoplus24@naver.com" class="contact-item">
+        <div class="ci-label">이메일</div>
+        <div class="ci-value">ecoplus24@naver.com</div>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<!-- 푸터 미니 -->
+<footer class="footer-mini">
+  <div>주식회사 에코플러스 · 대표 김태검 · 사업자등록번호 147-86-03498 · 통신판매업신고 제 2026-경기구리-0086 호</div>
+  <div style="margin-top:6px">경기도 구리시 갈매중앙로 190, 휴밸나인지식산업센터 C동 10097호 · 031-571-8953</div>
+  <div style="margin-top:14px">
+    <a href="index.html">메인</a> ·
+    <a href="terms.html">이용약관</a> ·
+    <a href="privacy.html">개인정보처리방침</a> ·
+    <a href="refund-policy.html">환불 정책</a>
+  </div>
+  <div style="margin-top:14px;color:rgba(255,255,255,.35);font-size:11px">© 2026 (주)에코플러스. All rights reserved.</div>
+</footer>
+
+
+<!-- ═══ 에코플러스 통합 트래커 ═══ -->
+<script>
+  window.ECO_TRACK_CONFIG = {
+    gasUrl: 'https://script.google.com/macros/s/AKfycbzmeIEQaAZAYt1njCVs4BzdGCQdyMC4Q8I_9VCjxEAYpEqCxZpPT7YDcYqQuL8KUQMJ/exec',   /* Apps Script 배포 후 /exec URL로 교체 */
+    site: 'ecoplus100',
+    crossDomains: ['ecofree.cloud']
+  };
+</script>
+<script src="eco-track.js"></script>
+</body>
+</html>
