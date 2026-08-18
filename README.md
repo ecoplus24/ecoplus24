@@ -3,6 +3,11 @@
 > 정찰제·숨은비용 0원의 신뢰받는 중소기업 컨설팅 사이트
 > 1차 진단 무료 → 본 컨설팅 토스 안전결제 모델
 
+> **v13 (2026-08-18) — PG 심사 대응 문구 정비판입니다.**
+> 정책자금·창업·연구소·벤처 4개 상세페이지의 결과 보장성 표현을 정비하고,
+> 이용약관(`terms.html`)·개인정보처리방침(`privacy.html`)을 신규 추가했습니다.
+> 변경 내역과 배포 전 확인사항은 **[PG심사_대응_변경요약_v13.md](PG심사_대응_변경요약_v13.md)** 를 먼저 보세요.
+
 > **v12부터 배포 방식이 바뀌었습니다.**
 > 무료진단은 [ecofree.cloud](https://ecofree.cloud/) 자가진단으로 연결되고,
 > 배포는 드래그앤드롭이 아니라 **GitHub 커밋 → Netlify 자동배포**입니다.
@@ -17,6 +22,8 @@
 ```
 ecoplus_store_final/
 ├── index.html                      ⭐ 메인 홈페이지
+├── terms.html                      ⚖️ 이용약관 (v13 신규)
+├── privacy.html                    🔒 개인정보처리방침 (v13 신규)
 ├── ecoplus_policy_fund.html        정책자금 상세
 ├── ecoplus_startup_fund.html       창업지원금 상세
 ├── ecoplus_rnd_center.html         기업부설연구소 상세
