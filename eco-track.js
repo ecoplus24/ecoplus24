@@ -10,7 +10,7 @@
    [사용법] 페이지의 <\/body> 직전에 설정 블록을 두고 이 파일을 불러온다.
      <script> window.ECO_TRACK_CONFIG = {
          gasUrl: 'https://script.google.com/macros/s/AKfy.../exec',
-         site: 'ecoplus100',
+         site: 'ecoplus24',
          crossDomains: ['ecofree.cloud']
      }; <\/script>
      <script src="eco-track.js"><\/script>

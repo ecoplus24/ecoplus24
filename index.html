@@ -9,28 +9,28 @@
 <!-- 보안 스크립트 (그대로 유지) -->
 <script src="security.js"></script>
 
-<meta name="description" content="경영지도사 그룹이 직접 수행하는 4대 핵심 컨설팅. 1차 진단 100% 무료, 정책자금 49.8만원부터. 정찰제·숨은비용 0원·토스 안전결제.">
+<meta name="description" content="경영지도사 그룹이 직접 수행하는 4대 핵심 컨설팅. 1차 진단 100% 무료, 정책자금 49.8만원부터. 정찰제·숨은비용 0원·네이버페이 안전결제.">
 <meta name="keywords" content="경영컨설팅, 경영지도사, 정책자금, 창업지원금, 기업부설연구소, 벤처기업인증, 중소기업 컨설팅, R&D 세액공제, 에코플러스">
 <meta name="author" content="(주)에코플러스 경영지도사 그룹">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://eco-toss01.netlify.app/">
+<link rel="canonical" href="https://ecoplus24.cloud/">
 
 <!-- ═════════ Open Graph (카카오톡·페이스북 공유) ═════════ -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="에코플러스 경영컨설팅">
 <meta property="og:title" content="에코플러스 경영지도사 그룹 | 4대 핵심 컨설팅">
 <meta property="og:description" content="1차 진단 100% 무료 · 정책자금 49.8만원부터 · 정찰제·숨은비용 0원. 경영지도사 그룹이 직접 수행하는 신뢰의 컨설팅.">
-<meta property="og:image" content="https://eco-toss01.netlify.app/og-image.png">
+<meta property="og:image" content="https://ecoplus24.cloud/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="https://eco-toss01.netlify.app/">
+<meta property="og:url" content="https://ecoplus24.cloud/">
 <meta property="og:locale" content="ko_KR">
 
 <!-- ═════════ Twitter Card ═════════ -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="에코플러스 경영지도사 그룹 | 4대 핵심 컨설팅">
 <meta name="twitter:description" content="1차 진단 무료 · 경영지도사 그룹이 직접 수행하는 신뢰의 정책자금·창업지원금·R&D·벤처인증 컨설팅.">
-<meta name="twitter:image" content="https://eco-toss01.netlify.app/og-image.png">
+<meta name="twitter:image" content="https://ecoplus24.cloud/og-image.png">
 
 <!-- ═════════ Favicon ═════════ -->
 <link rel="icon" type="image/png" href="ecoplus_logo.png">
@@ -44,8 +44,8 @@
   "legalName": "주식회사 에코플러스",
   "alternateName": "에코플러스 경영지도사 그룹",
   "description": "경영지도사 그룹이 직접 수행하는 중소기업 전문 컨설팅. 정책자금·창업지원금·R&D·벤처인증 4대 핵심 컨설팅.",
-  "url": "https://eco-toss01.netlify.app/",
-  "image": "https://eco-toss01.netlify.app/TGK03.jpg",
+  "url": "https://ecoplus24.cloud/",
+  "image": "https://ecoplus24.cloud/TGK03.jpg",
   "telephone": "+82-31-571-8953",
   "taxID": "147-86-03498",
   "priceRange": "₩498,000 - ₩1,200,000",
@@ -263,6 +263,9 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .prod-cta:hover{border-color:var(--forest);background:var(--forest);color:#fff}
 .prod-cta-buy{flex:1;background:var(--gold);color:var(--forest-strong);padding:11px 8px;border-radius:5px;font-size:12.5px;font-weight:700;transition:all .22s;text-align:center}
 .prod-cta-buy:hover{background:var(--gold-deep);color:#fff;transform:translateY(-1px)}
+.prod-cta-wrap{flex-wrap:wrap}
+.prod-cta-pay{flex-basis:100%;background:var(--forest);color:#fff;border:none;padding:12px 8px;border-radius:5px;font-size:13px;font-weight:800;letter-spacing:-.2px;cursor:pointer;transition:all .22s;font-family:inherit}
+.prod-cta-pay:hover{background:var(--forest-strong)}
 
 /* ── 프로세스 ── */
 .process{background:linear-gradient(165deg,var(--forest) 0%,var(--forest-strong) 100%);color:#fff;position:relative;overflow:hidden}
@@ -557,6 +560,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
           <div class="prod-cta-wrap">
             <a href="https://ecofree.cloud/" class="prod-cta-buy" data-track="진단CTA-정책자금">무료 진단 신청</a>
             <a href="ecoplus_policy_fund.html" class="prod-cta">상세보기</a>
+            <button type="button" class="prod-cta-pay" onclick="openPayModal('정책자금 컨설팅', 498000, 'https://smartstore.naver.com/myeongri_wisdom/products/13586581023')" data-track="결제CTA-정책자금">결제하기</button>
           </div>
         </div>
       </div>
@@ -584,6 +588,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
           <div class="prod-cta-wrap">
             <a href="https://ecofree.cloud/" class="prod-cta-buy" data-track="진단CTA-창업지원금">무료 진단 신청</a>
             <a href="ecoplus_startup_fund.html" class="prod-cta">상세보기</a>
+            <button type="button" class="prod-cta-pay" onclick="openPayModal('창업지원금 컨설팅', 1200000, 'https://smartstore.naver.com/myeongri_wisdom/products/13586575065')" data-track="결제CTA-창업지원금">결제하기</button>
           </div>
         </div>
       </div>
@@ -611,6 +616,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
           <div class="prod-cta-wrap">
             <a href="https://ecofree.cloud/" class="prod-cta-buy" data-track="진단CTA-기업부설연구소">무료 진단 신청</a>
             <a href="ecoplus_rnd_center.html" class="prod-cta">상세보기</a>
+            <button type="button" class="prod-cta-pay" onclick="openPayModal('기업부설연구소 설립', 1200000, 'https://smartstore.naver.com/myeongri_wisdom/products/13586677076')" data-track="결제CTA-기업부설연구소">결제하기</button>
           </div>
         </div>
       </div>
@@ -638,6 +644,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
           <div class="prod-cta-wrap">
             <a href="https://ecofree.cloud/" class="prod-cta-buy" data-track="진단CTA-벤처인증">무료 진단 신청</a>
             <a href="ecoplus_venture_cert.html" class="prod-cta">상세보기</a>
+            <button type="button" class="prod-cta-pay" onclick="openPayModal('벤처기업 인증', 1200000, 'https://smartstore.naver.com/myeongri_wisdom/products/13586701800')" data-track="결제CTA-벤처인증">결제하기</button>
           </div>
         </div>
       </div>
@@ -837,7 +844,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
     <div class="modal-head">
       <button class="modal-close" onclick="closePayModal()">×</button>
       <h4>본 컨설팅 결제</h4>
-      <p>네이버페이 또는 토스로 안전하게 결제하세요</p>
+      <p>네이버페이로 안전하게 결제하세요</p>
     </div>
     <div class="modal-body">
       <div class="mb-row">
@@ -870,12 +877,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
           <path d="M14.5 7v5.2L9.8 7H7v10h2.5v-5.2l4.7 5.2H17V7h-2.5z" fill="#03C75A"/>
         </svg>
         네이버페이로 결제하기
-      </button>
-      <button class="toss-btn" id="tossBtn" disabled onclick="requestTossPayment()">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3 7L9 17L21 5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        토스로 안전결제하기
       </button>
       <p class="mb-note">
         💡 처음이시라면 <a href="https://ecofree.cloud/" data-track="진단CTA-결제모달">1분 무료 자가진단</a>부터 받아보시는 것을 권장드립니다.
@@ -948,9 +949,10 @@ function closePayModal(){
 }
 function toggleTossBtn(){
   const checked = document.getElementById('agreeCheck').checked;
-  document.getElementById('tossBtn').disabled = !checked;
-  const naverBtn = document.getElementById('naverBtn');
-  if (naverBtn) naverBtn.disabled = !checked;
+  ['tossBtn','naverBtn','payBtn'].forEach(function(id){
+    const b = document.getElementById(id);
+    if (b) b.disabled = !checked;
+  });
 }
 
 /* ── 네이버 스마트스토어로 이동 ── */
@@ -1015,6 +1017,21 @@ window.addEventListener('load', function(){
   }
 });
 
+/* ── 상세페이지에서 넘어온 결제 요청 (?pay=policy 등) ── */
+var PAY_PRESETS = {
+  policy:  { name: '정책자금 컨설팅', amount: 498000, storeUrl: 'https://smartstore.naver.com/myeongri_wisdom/products/13586581023' },
+  startup: { name: '창업지원금 컨설팅', amount: 1200000, storeUrl: 'https://smartstore.naver.com/myeongri_wisdom/products/13586575065' },
+  rnd:     { name: '기업부설연구소 설립', amount: 1200000, storeUrl: 'https://smartstore.naver.com/myeongri_wisdom/products/13586677076' },
+  venture: { name: '벤처기업 인증', amount: 1200000, storeUrl: 'https://smartstore.naver.com/myeongri_wisdom/products/13586701800' }
+};
+window.addEventListener('load', function(){
+  var k = new URLSearchParams(location.search).get('pay');
+  if (k && PAY_PRESETS[k]){
+    var p = PAY_PRESETS[k];
+    setTimeout(function(){ openPayModal(p.name, p.amount, p.storeUrl); }, 350);
+  }
+});
+
 /* ── Toast ── */
 function showToast(msg){
   const t = document.getElementById('toast');
@@ -1055,7 +1072,7 @@ document.addEventListener('keydown', e => {
 <script>
   window.ECO_TRACK_CONFIG = {
     gasUrl: 'https://script.google.com/macros/s/AKfycbzmeIEQaAZAYt1njCVs4BzdGCQdyMC4Q8I_9VCjxEAYpEqCxZpPT7YDcYqQuL8KUQMJ/exec',   /* Apps Script 배포 후 /exec URL로 교체 */
-    site: 'ecoplus100',
+    site: 'ecoplus24',
     crossDomains: ['ecofree.cloud']
   };
 </script>
